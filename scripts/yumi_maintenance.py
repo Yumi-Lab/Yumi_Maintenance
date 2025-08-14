@@ -73,7 +73,7 @@ class YumiMaintenance:
             },
             {
                 'name': 'clean_plate',
-                'interval': timedelta(month=2),
+                'interval': timedelta(week=1),
                 'message': "Clean Plate",
                 'prompt': "Code: P00 - MAINTENANCE: Clean Plate (Weekly) Scan for complete guide",
                 'qr_message': "Cleaning guide",
@@ -84,7 +84,7 @@ class YumiMaintenance:
             },
             {
                 'name': 'belt_tension',
-                'interval': timedelta(week=2),
+                'interval': timedelta(month=2),
                 'message': "Clean Plate",
                 'prompt': "Code: A01 - MAINTENANCE: Belt Tension (Weekly) Scan for complete guide",
                 'qr_message': "Cleaning guide",
