@@ -1,4 +1,4 @@
-Yumi_Maintenance
+# Yumi_Maintenance
 
 Yumi_Maintenance provides scripts and configuration files to easily enable or disable a maintenance mode for Klipper and KlipperScreen.
 
@@ -7,7 +7,7 @@ When disabled, the section is removed — no manual editing needed.
 
 ---
 
-Features
+# Features
 - Automatic config management — no need to manually edit printer.cfg
 - Systemd timer service — checks every 10 minutes for maintenance mode changes
 - Custom scripts for Klipper and KlipperScreen integration
@@ -16,7 +16,7 @@ Features
 
 ---
 
-Requirements
+# Requirements
 - Raspberry Pi running Klipper + KlipperScreen
 - git and python3 installed
 - Access to /home/pi user directory
@@ -24,14 +24,16 @@ Requirements
 
 ---
 
-Installation
+# Installation
 Clone the repository and run the installer:
 
+```bash
 git clone https://github.com/Yumi-Lab/Yumi_Maintenance.git
 cd Yumi_Maintenance/install
 ./install.sh
+```
 
-The installer will:
+## The installer will:
 - Copy prompts.py into the KlipperScreen widgets folder
 - Copy yumi_maintenance.py into the Klipper extras folder
 - Install Yumi_Maintenance.cfg into your Klipper config folder
@@ -40,7 +42,7 @@ The installer will:
 
 ---
 
-Configuration
+# Configuration
 Edit /home/pi/printer_data/config/Yumi_Maintenance.cfg:
 
 enable_maintenance=True
@@ -50,7 +52,7 @@ enable_maintenance=True
 
 ---
 
-How It Works
+# How It Works
 1. Every 10 minutes, the systemd timer runs check_maintenance.py
 2. The script reads enable_maintenance in Yumi_Maintenance.cfg
 3. If True:
@@ -63,8 +65,9 @@ How It Works
 
 ---
 
-Uninstallation
+# Uninstallation
 
+```bash
 sudo systemctl disable --now yumi_maintenance.timer
 sudo rm /etc/systemd/system/yumi_maintenance.service
 sudo rm /etc/systemd/system/yumi_maintenance.timer
@@ -75,6 +78,7 @@ rm -f /home/pi/klipper/klippy/extras/yumi_maintenance.py
 rm -f /home/pi/printer_data/config/Yumi_Maintenance.cfg
 rm -rf /home/pi/KlipperScreen/styles/maintenance/
 rm -rf /home/pi/Yumi_Maintenance
+```
 
 If [yumi_maintenance] is still present in your printer.cfg and you want it removed, delete the line manually or set enable_maintenance=False before uninstalling.
 
@@ -88,5 +92,8 @@ Notes
 
 ---
 
-License
+# License
 MIT License
+
+
+
