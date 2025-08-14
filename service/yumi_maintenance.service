@@ -1,0 +1,6 @@
+[Unit]
+Description=Vérification et mise à jour du mode maintenance Yumi
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/pi/Yumi_Maintenance/scripts/check_maintenance.py
