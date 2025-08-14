@@ -51,7 +51,7 @@ class YumiMaintenance:
             },
             {
                 'name': 'oil_z_axes',
-                'interval': timedelta(month=1),
+                'interval': timedelta(month=3),
                 'message': "Lubricate Z axes",
                 'prompt': "Code: A00 - MAINTENANCE: Lubricate Z axes (Monthly) Scan for complete guide",
                 'qr_message': "Scan for complete guide",
@@ -70,10 +70,10 @@ class YumiMaintenance:
                 'priority': 2,
                 'first': False,
                 'first_delay': timedelta(seconds=90)
-            }
+            },
             {
                 'name': 'clean_plate',
-                'interval': timedelta(week=2),
+                'interval': timedelta(month=2),
                 'message': "Clean Plate",
                 'prompt': "Code: P00 - MAINTENANCE: Clean Plate (Weekly) Scan for complete guide",
                 'qr_message': "Cleaning guide",
@@ -81,14 +81,25 @@ class YumiMaintenance:
                 'priority': 2,
                 'first': False,
                 'first_delay': timedelta(seconds=90)
-            }
+            },
             {
                 'name': 'belt_tension',
                 'interval': timedelta(week=2),
                 'message': "Clean Plate",
                 'prompt': "Code: A01 - MAINTENANCE: Belt Tension (Weekly) Scan for complete guide",
                 'qr_message': "Cleaning guide",
-                'imgqr': "/home/pi/KlipperScreen/styles/belt_tension.png",
+                'imgqr': "/home/pi/KlipperScreen/styles/maintenance/belt_tension.png",
+                'priority': 2,
+                'first': False,
+                'first_delay': timedelta(seconds=90)
+            },
+            {
+                'name': 'clean_fan',
+                'interval': timedelta(week=2),
+                'message': "Clean Fan",
+                'prompt': "Code: A01 - MAINTENANCE: Clean Fan (Weekly) Scan for complete guide",
+                'qr_message': "Cleaning guide",
+                'imgqr': "/home/pi/KlipperScreen/styles/maintenance/clean_fan.png",
                 'priority': 2,
                 'first': False,
                 'first_delay': timedelta(seconds=90)
