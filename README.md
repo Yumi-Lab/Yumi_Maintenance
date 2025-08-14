@@ -5,6 +5,10 @@ Yumi_Maintenance provides scripts and configuration files to easily enable or di
 When maintenance mode is enabled, a [yumi_maintenance] section is automatically inserted into your printer.cfg to activate specific maintenance features.
 When disabled, the section is removed — no manual editing needed.
 
+<a href="https://github.com/Yumi-Lab/Yumi_Maintenance/blob/main/img_readme/">
+    <img src="https://github.com/Yumi-Lab/Yumi_Maintenance/blob/main/img_readme/screen_maintenance-example.png?raw=true" alt="Translation status" />
+</a>
+
 ---
 
 # Features
